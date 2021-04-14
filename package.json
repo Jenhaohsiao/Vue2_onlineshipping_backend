@@ -1,0 +1,30 @@
+{
+  "name": "vue2_onlineshipping_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Jenhaohsiao@github.com/Jenhaohsiao/Vue2_onlineshipping_backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jenhaohsiao/Vue2_onlineshipping_backend/issues"
+  },
+  "homepage": "https://github.com/Jenhaohsiao/Vue2_onlineshipping_backend#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.13.10",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.15",
+    "@babel/node": "^7.13.13",
+    "@babel/plugin-transform-runtime": "^7.13.15",
+    "@babel/preset-env": "^7.13.15"
+  }
+}

@@ -92,6 +92,7 @@ app.post('/api/users/:userId/cart', async (req, res) => {
     const user = await db.collection('users').findOne({
         id: userId
     });
+    const products = await db.collection('products').find({}).toArray();
     const cartItemIds = user.cartItems;
     const cartItems = cartItemIds.map(id =>
         products.find(product => product.id === id));

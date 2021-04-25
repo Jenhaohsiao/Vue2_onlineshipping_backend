@@ -18,7 +18,7 @@ app.use(history());
 app.get('/api/products', async (req, res) => {
     const client = await MongoClient.connect(
         process.env.MONGO_USER && process.env.MONGO_PASS ?
-        `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.vxfvg.mongodb.net/${process.env.MONGO_DBNAME}?retryWrites=true&w=majority` :
+        `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@${process.env.MONGO_CLUSTER}/${process.env.MONGO_DBNAME}?retryWrites=true&w=majority` :
         'mongodb://localhost:27017', {
             useNewUrlParser: true,
             useUnifiedTopology: true
@@ -36,7 +36,7 @@ app.get('/api/users/:userId/cart', async (req, res) => {
     } = req.params;
     const client = await MongoClient.connect(
         process.env.MONGO_USER && process.env.MONGO_PASS ?
-        `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.vxfvg.mongodb.net/${process.env.MONGO_DBNAME}?retryWrites=true&w=majority` :
+        `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@${process.env.MONGO_CLUSTER}/${process.env.MONGO_DBNAME}?retryWrites=true&w=majority` :
         'mongodb://localhost:27017', {
             useNewUrlParser: true,
             useUnifiedTopology: true
@@ -61,7 +61,7 @@ app.get('/api/products/:productId', async (req, res) => {
     } = req.params;
     const client = await MongoClient.connect(
         process.env.MONGO_USER && process.env.MONGO_PASS ?
-        `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.vxfvg.mongodb.net/${process.env.MONGO_DBNAME}?retryWrites=true&w=majority` :
+        `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@${process.env.MONGO_CLUSTER}/${process.env.MONGO_DBNAME}?retryWrites=true&w=majority` :
         'mongodb://localhost:27017', {
             useNewUrlParser: true,
             useUnifiedTopology: true
@@ -88,7 +88,7 @@ app.post('/api/users/:userId/cart', async (req, res) => {
     } = req.body;
     const client = await MongoClient.connect(
         process.env.MONGO_USER && process.env.MONGO_PASS ?
-        `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.vxfvg.mongodb.net/${process.env.MONGO_DBNAME}?retryWrites=true&w=majority` :
+        `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@${process.env.MONGO_CLUSTER}/${process.env.MONGO_DBNAME}?retryWrites=true&w=majority` :
         'mongodb://localhost:27017', {
             useNewUrlParser: true,
             useUnifiedTopology: true
@@ -120,7 +120,7 @@ app.delete('/api/users/:userId/cart/:productId', async (req, res) => {
     } = req.params;
     const client = await MongoClient.connect(
         process.env.MONGO_USER && process.env.MONGO_PASS ?
-        `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.vxfvg.mongodb.net/${process.env.MONGO_DBNAME}?retryWrites=true&w=majority` :
+        `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@${process.env.MONGO_CLUSTER}/${process.env.MONGO_DBNAME}?retryWrites=true&w=majority` :
         'mongodb://localhost:27017', {
             useNewUrlParser: true,
             useUnifiedTopology: true
